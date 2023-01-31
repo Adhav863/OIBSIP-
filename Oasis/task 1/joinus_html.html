@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Login Form</title>
+        <link rel="stylesheet" href="joinus_css.css">
+    </head>
+    <body>
+        <div class="hero">
+            <a href="home_html.html" class="btn">Home</a>      
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                    <button type="button" class="toggle-btn" onclick="register()">Register</button>
+                </div>
+                <div class="social-icons">
+                    <img src="fb.png">
+                    <img src="tw.png">
+                    <img src="gp.png">
+                </div>
+                <form id="login" class="input-group" method="post" action="joinus_vali.php">
+                    <input type="email" name="register_email" class="input-field" placeholder="Email"/>
+                    <input type="password" name="register_pass" class="input-field" placeholder="Enter Password"/>
+                    <input type="checkbox" class="check-box"><span>Remember Password</span>
+                    <button type="submit" class="submit-btnx" name="submit">Log In</button>
+                </form>
+                <form id="register"class="input-group" action="joinus_reg.php" method="post">
+                    <input type="text" name="register_username" class="input-field" placeholder="User Name" required>
+                    <input type="email" name="register_email" class="input-field" placeholder="Email Id" required>
+                    <input type="password" name="register_pass" class="input-field" placeholder="Enter Password" required>
+                    <input type="password" name="register_repass" class="input-field" placeholder="Re-Enter password" required>
+                    <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+             </div>      
+        </div>
+        
+        <script>
+            var x = document.getElementById("login");
+            var y = document.getElementById("register");
+            var z = document.getElementById("btn");
+
+            function register(){
+                x.style.left="-400px";
+                y.style.left="50px";
+                z.style.left="110px"
+            }
+            function login(){
+                x.style.left="50px";
+                y.style.left="450px";
+                z.style.left="0"
+            }
+        </script>
+        
+    </body>
+
+</html>
